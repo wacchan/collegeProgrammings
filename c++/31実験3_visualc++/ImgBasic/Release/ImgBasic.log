@@ -1,0 +1,56 @@
+﻿2018/07/20 16:59:55 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\project\Documents\ImgBasic\ImgBasic\ImgBasic.vcxproj" (build ターゲット)。
+     1>InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\ImgBasic.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\ImgBasic.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\ImgBasic.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ImgBasic.cpp ImgBasicDoc.cpp ImgBasicView.cpp ImgBasicView2.cpp ImgBmp.cpp ImgPgm.cpp MainFrm.cpp MaskFilter.cpp MyFileDialog.cpp MyInput.cpp MyInput2.cpp Random.cpp Utility_Basic.cpp Utility_Imgproc.cpp
+         ImgBasic.cpp
+         ImgBasicDoc.cpp
+         ImgBasicView.cpp
+         ImgBasicView2.cpp
+         ImgBmp.cpp
+         ImgPgm.cpp
+     1>ImgPgm.cpp(163): warning C4101: 'y' : ローカル変数は 1 度も使われていません。
+     1>ImgPgm.cpp(163): warning C4101: 'x' : ローカル変数は 1 度も使われていません。
+         MainFrm.cpp
+         MaskFilter.cpp
+         MyFileDialog.cpp
+         MyInput.cpp
+         MyInput2.cpp
+         Random.cpp
+         Utility_Basic.cpp
+         Utility_Imgproc.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _AFXDLL /l"0x0411" /IRelease\ /nologo /fo"Release\ImgBasic.res" ImgBasic.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\project\Documents\ImgBasic\Release\ImgBasic.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\ImgBasic.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\project\Documents\ImgBasic\Release\ImgBasic.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\project\Documents\ImgBasic\Release\ImgBasic.lib" /MACHINE:X86 Release\ImgBasic.res
+         Release\ImgBasic.obj
+         Release\ImgBasicDoc.obj
+         Release\ImgBasicView.obj
+         Release\ImgBasicView2.obj
+         Release\ImgBmp.obj
+         Release\ImgPgm.obj
+         Release\MainFrm.obj
+         Release\MaskFilter.obj
+         Release\MyFileDialog.obj
+         Release\MyInput.obj
+         Release\MyInput2.obj
+         Release\Random.obj
+         Release\stdafx.obj
+         Release\Utility_Basic.obj
+         Release\Utility_Imgproc.obj
+         コード生成しています。
+         コード生成が終了しました。
+         ImgBasic.vcxproj -> C:\Users\project\Documents\ImgBasic\Release\ImgBasic.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\project\Documents\ImgBasic\Release\ImgBasic.exe;#1" /manifest Release\ImgBasic.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         ファイル "Release\ImgBasic.unsuccessfulbuild" を削除しています。
+         "Release\ImgBasic.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "C:\Users\project\Documents\ImgBasic\ImgBasic\ImgBasic.vcxproj" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:34.81

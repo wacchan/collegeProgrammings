@@ -1,0 +1,46 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   System10General.java
+
+package systems09;
+
+import org.mklab.nfc.matrix.DoubleMatrix;
+import org.mklab.nfc.matrix.Matrix;
+import org.mklab.tool.control.LinearSystemFactory;
+import org.mklab.tool.control.Zp2tfn;
+import org.mklab.tool.control.system.continuous.BaseContinuousExplicitDynamicSystem;
+import org.mklab.tool.control.system.continuous.ContinuousLinearDynamicSystem;
+
+public class System10General extends BaseContinuousExplicitDynamicSystem
+{
+
+    public System10General()
+    {
+        super(1, 1, 2);
+        setHasDirectFeedthrough(false);
+        Matrix zeros = new DoubleMatrix(new double[] {
+            -0.5D
+        });
+        Matrix poles = new DoubleMatrix(new double[] {
+            -1D, -2D
+        });
+        Matrix gain = new DoubleMatrix(new double[] {
+            4D
+        });
+        org.mklab.nfc.scalar.RationalPolynomial g = Zp2tfn.zp2tfn(zeros, poles, gain);
+        system = new ContinuousLinearDynamicSystem(LinearSystemFactory.createLinearSystem(g));
+    }
+
+    public Matrix stateEquation(double t, Matrix x, Matrix u)
+    {
+        return system.stateEquation(t, x, u);
+    }
+
+    public Matrix outputEquation(double t, Matrix x)
+    {
+        return system.outputEquation(t, x);
+    }
+
+    private ContinuousLinearDynamicSystem system;
+}

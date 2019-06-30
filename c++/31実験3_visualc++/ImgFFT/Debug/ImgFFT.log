@@ -1,0 +1,78 @@
+﻿2011/03/29 14:23:15 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\ImgFFT\ImgFFT.vcxproj" (build ターゲット)。
+     1>InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Debug\ImgFFT.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\ImgFFT.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\ImgFFT.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Complex.cpp ImgBmp.cpp ImgFFT.cpp ImgFFTDoc.cpp ImgFFTView.cpp ImgPgm.cpp MainFrm.cpp MaskFilter.cpp MyFileDialog.cpp MyInput.cpp MyInput2.cpp MyMakeFigureDialog.cpp Random.cpp Utility_Basic.cpp Utility_FFT.cpp
+         Utility_FFT.cpp
+         Utility_Basic.cpp
+         Random.cpp
+         MyMakeFigureDialog.cpp
+         MyInput2.cpp
+         MyInput.cpp
+         MyFileDialog.cpp
+         MaskFilter.cpp
+         MainFrm.cpp
+         ImgPgm.cpp
+         ImgFFTView.cpp
+         ImgFFTDoc.cpp
+         ImgFFT.cpp
+         ImgBmp.cpp
+         Complex.cpp
+         コードを生成中...
+       ResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0411" /IDebug\ /nologo /fo"Debug\ImgFFT.res" ImgFFT.rc 
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\ImgFFT.exe.embed.manifest.res" Debug\ImgFFT_manifest.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\ImgFFT.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.lib" /MACHINE:X86 Debug\ImgFFT.res
+         Debug\ImgFFT.exe.embed.manifest.res
+         Debug\Complex.obj
+         Debug\ImgBmp.obj
+         Debug\ImgFFT.obj
+         Debug\ImgFFTDoc.obj
+         Debug\ImgFFTView.obj
+         Debug\ImgPgm.obj
+         Debug\MainFrm.obj
+         Debug\MaskFilter.obj
+         Debug\MyFileDialog.obj
+         Debug\MyInput.obj
+         Debug\MyInput2.obj
+         Debug\MyMakeFigureDialog.obj
+         Debug\Random.obj
+         Debug\stdafx.obj
+         Debug\Utility_Basic.obj
+         Debug\Utility_FFT.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\ImgFFT.exe.embed.manifest" /manifest Debug\ImgFFT.exe.intermediate.manifest "C:\Program Files\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\ImgFFT.exe.embed.manifest.res" Debug\ImgFFT_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\ImgFFT.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.lib" /MACHINE:X86 Debug\ImgFFT.res
+         Debug\ImgFFT.exe.embed.manifest.res
+         Debug\Complex.obj
+         Debug\ImgBmp.obj
+         Debug\ImgFFT.obj
+         Debug\ImgFFTDoc.obj
+         Debug\ImgFFTView.obj
+         Debug\ImgPgm.obj
+         Debug\MainFrm.obj
+         Debug\MaskFilter.obj
+         Debug\MyFileDialog.obj
+         Debug\MyInput.obj
+         Debug\MyInput2.obj
+         Debug\MyMakeFigureDialog.obj
+         Debug\Random.obj
+         Debug\stdafx.obj
+         Debug\Utility_Basic.obj
+         Debug\Utility_FFT.obj
+         ImgFFT.vcxproj -> C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\Debug\ImgFFT.exe
+       FinalizeBuildStatus:
+         ファイル "Debug\ImgFFT.unsuccessfulbuild" を削除しています。
+         "Debug\ImgFFT.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "C:\Users\zg2011\Documents\実験\プロジェクト\配布用VC2010\配布用\ImgFFT\ImgFFT\ImgFFT.vcxproj" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:13.66

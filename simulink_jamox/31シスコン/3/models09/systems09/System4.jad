@@ -1,0 +1,38 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   System4.java
+
+package systems09;
+
+import org.mklab.nfc.matrix.DoubleMatrix;
+import org.mklab.nfc.matrix.Matrix;
+import org.mklab.nfc.ode.SolverStopException;
+import org.mklab.tool.control.system.SystemBuilder;
+import org.mklab.tool.control.system.SystemOperator;
+import org.mklab.tool.control.system.continuous.*;
+import org.mklab.tool.control.system.math.ConstantSystem;
+
+public class System4 extends BaseContinuousStaticSystem
+{
+
+    public System4()
+    {
+        super(1, 1);
+        ConstantSystem constantSystem = new ConstantSystem(new DoubleMatrix(new double[] {
+            2D
+        }));
+        TransportDelay delaySystem = new TransportDelay(2D);
+        system = (new SystemBuilder(constantSystem)).multiply(new SystemBuilder(delaySystem)).getSystemOperator();
+        setInputSize(system.getInputSize());
+        setOutputSize(system.getOutputSize());
+    }
+
+    public Matrix outputEquation(double t, Matrix u)
+        throws SolverStopException
+    {
+        return ((ContinuousStaticSystem)system).outputEquation(t, u);
+    }
+
+    private SystemOperator system;
+}

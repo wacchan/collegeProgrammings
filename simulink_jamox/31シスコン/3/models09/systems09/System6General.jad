@@ -1,0 +1,49 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   System6General.java
+
+package systems09;
+
+import org.mklab.nfc.matrix.Matrix;
+import org.mklab.nfc.scalar.Polynomial;
+import org.mklab.nfc.scalar.RationalPolynomial;
+import org.mklab.tool.control.LinearSystem;
+import org.mklab.tool.control.LinearSystemFactory;
+import org.mklab.tool.control.system.continuous.BaseContinuousExplicitDynamicSystem;
+import org.mklab.tool.control.system.continuous.ContinuousLinearDynamicSystem;
+
+public class System6General extends BaseContinuousExplicitDynamicSystem
+{
+
+    public System6General()
+    {
+        super(1, 1, 2);
+        setHasDirectFeedthrough(false);
+        Polynomial numerator1 = new Polynomial(1);
+        Polynomial denominator1 = new Polynomial(new double[] {
+            1.0D, 1.0D
+        });
+        RationalPolynomial g1 = new RationalPolynomial(numerator1, denominator1);
+        LinearSystem system1 = LinearSystemFactory.createLinearSystem(g1);
+        Polynomial numerator2 = new Polynomial(2);
+        Polynomial denominator2 = new Polynomial(new double[] {
+            1.0D, 0.5D
+        });
+        RationalPolynomial g2 = new RationalPolynomial(numerator2, denominator2);
+        LinearSystem system2 = LinearSystemFactory.createLinearSystem(g2);
+        system = new ContinuousLinearDynamicSystem(system2.multiply(system1));
+    }
+
+    public Matrix stateEquation(double t, Matrix x, Matrix u)
+    {
+        return system.stateEquation(t, x, u);
+    }
+
+    public Matrix outputEquation(double t, Matrix x)
+    {
+        return system.outputEquation(t, x);
+    }
+
+    private ContinuousLinearDynamicSystem system;
+}

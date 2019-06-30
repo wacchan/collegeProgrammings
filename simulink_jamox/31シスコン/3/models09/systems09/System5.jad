@@ -1,0 +1,50 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   System5.java
+
+package systems09;
+
+import org.mklab.nfc.matrix.Matrix;
+import org.mklab.nfc.ode.SolverStopException;
+import org.mklab.nfc.scalar.Polynomial;
+import org.mklab.nfc.scalar.RationalPolynomial;
+import org.mklab.tool.control.LinearSystemFactory;
+import org.mklab.tool.control.system.SystemBuilder;
+import org.mklab.tool.control.system.SystemOperator;
+import org.mklab.tool.control.system.continuous.*;
+
+public class System5 extends BaseContinuousExplicitDynamicSystem
+{
+
+    public System5()
+    {
+        super(1, 1, 1);
+        TransportDelay delaySystem = new TransportDelay(1.0D);
+        Polynomial numerator = new Polynomial(2);
+        Polynomial denominator = new Polynomial(new double[] {
+            1.0D, 1.0D
+        });
+        RationalPolynomial g = new RationalPolynomial(numerator, denominator);
+        ContinuousLinearDynamicSystem linearSystem = new ContinuousLinearDynamicSystem(LinearSystemFactory.createLinearSystem(g));
+        system = (new SystemBuilder(linearSystem)).multiply(new SystemBuilder(delaySystem)).getSystemOperator();
+        setInputSize(system.getInputSize());
+        setOutputSize(system.getOutputSize());
+        setStateSize(system.getStateSize());
+        setHasDirectFeedthrough(true);
+    }
+
+    public Matrix stateEquation(double t, Matrix x, Matrix u)
+        throws SolverStopException
+    {
+        return ((ContinuousExplicitDynamicSystem)system).stateEquation(t, x, u);
+    }
+
+    public Matrix outputEquation(double t, Matrix x, Matrix u)
+        throws SolverStopException
+    {
+        return ((ContinuousDynamicSystem)system).outputEquation(t, x, u);
+    }
+
+    private SystemOperator system;
+}

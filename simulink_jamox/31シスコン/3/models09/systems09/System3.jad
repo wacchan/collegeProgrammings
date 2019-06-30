@@ -1,0 +1,32 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   System3.java
+
+package systems09;
+
+import org.mklab.nfc.scalar.Polynomial;
+import org.mklab.nfc.scalar.RationalPolynomial;
+import org.mklab.tool.control.LinearSystem;
+import org.mklab.tool.control.LinearSystemFactory;
+
+// Referenced classes of package systems09:
+//            EncapsulatedContinuousLinearDynamicSystem
+
+public class System3 extends EncapsulatedContinuousLinearDynamicSystem
+{
+
+    public System3()
+    {
+        Polynomial numerator = new Polynomial(25);
+        Polynomial denominator = new Polynomial(new double[] {
+            25D, 1.0D, 1.0D
+        });
+        RationalPolynomial g = new RationalPolynomial(numerator, denominator);
+        LinearSystem system = LinearSystemFactory.createLinearSystem(g);
+        setLinearSystem(system);
+        setInputSize(system.getInputSize());
+        setOutputSize(system.getOutputSize());
+        setStateSize(system.getStateSize());
+    }
+}
