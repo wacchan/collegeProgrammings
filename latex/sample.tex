@@ -1,0 +1,157 @@
+\documentclass[a4paper,11pt]{jarticle}
+
+\usepackage[top=25truemm,  bottom=30truemm,
+            left=24truemm, right=24truemm]{geometry}
+
+\usepackage{comment}
+\usepackage{arydshln}
+\setlength{\dashlinedash}{1pt}
+\setlength{\dashlinegap}{1pt}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{here}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+%\usepackage{setspace}
+
+\begin{document}
+%\setstretch{2}
+
+
+\begin{titlepage}
+\begin{center}
+\vspace*{150truept}
+{\Huge タイトル１}\\
+\vspace{10pt}
+{\Huge タイトル２}\\ % タイトル
+\vspace{20truept}
+%{\LARGE }\\ % サブタイトル（なければコメントアウト）
+\vspace{200truept}
+{\LARGE 学籍番号：17236082}\\ % 学籍番号
+\vspace{10truept}
+{\LARGE 氏名：渡邊　俊樹}\\ % 著者
+\end{center}
+\end{titlepage}
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\begin{verbatim}
+  \input{sec1.tex} %ファイル分割してコンパイルを高速化
+
+  \usepackage[dvipdfmx]{hyperref}
+  \usepackage{pxjahyper}       %目次から飛べるようになる
+
+  \tableofcontents　　　%目次作成
+
+  \usepackage{url}
+  \url{　　　　　　　　　　}　　　　%URL記述、無くても書ける
+
+  １
+  \begin{figure}[H]　　%Hは\usepackage{here}でその場に描画
+  \begin{center}
+  \includegraphics[width=100mm]{画像のファイル名}
+  \caption{タイトル}
+  \label{ラベル}
+  \end{center}
+  \end{figure}
+
+  ２
+  \begin{figure}[H]
+    \begin{center}
+      \begin{tabular}{c}
+
+        % 1
+        \begin{minipage}[b]{0.5\hsize}  %[b]で下揃えに画像描画
+          \begin{center}
+            \includegraphics[clip, width=6cm]{ファイル名}
+            \caption{タイトル}
+            \label{ラベル}
+          \end{center}
+        \end{minipage}
+
+          \hspace{-40pt}
+
+        % 2
+        \begin{minipage}[b]{0.45\hsize}　　%[b]で下揃えに画像描画
+          \begin{center}
+            \includegraphics[clip, width=6cm]{}
+            \caption{}
+            \label{}
+          \end{center}
+        \end{minipage}
+
+      \end{tabular}
+    \end{center}
+  \end{figure}
+
+  ３
+  \begin{figure}[H]
+    \begin{center}
+      \begin{tabular}{c}
+
+        % 1
+        \begin{minipage}[b]{0.31\hsize}
+          \begin{center}
+            \includegraphics[clip, width=4cm]{}
+            \caption{}
+            \label{}
+          \end{center}
+        \end{minipage}
+
+        % 2
+        \begin{minipage}[b]{0.31\hsize}
+          \begin{center}
+            \includegraphics[clip, width=4cm]{}
+            \caption{}
+            \label{}
+          \end{center}
+        \end{minipage}
+
+        % 3
+        \begin{minipage}[b]{0.31\hsize}
+          \begin{center}
+            \includegraphics[clip, width=4cm]{}
+            \caption{}
+            \label{}
+          \end{center}
+        \end{minipage}
+
+      \end{tabular}
+    \end{center}
+  \end{figure}
+
+  \begin{align}
+
+  \end{align}
+
+  文書式　表
+  \begin{table}[位置指定]　%H
+    \scalebox{0.6}[0.8]{  % 0.6はヨコ幅の倍率、0.8はタテ幅の倍率
+      \begin{tabular}{列指定}　% |c|c|c| cは真ん中、lは左詰め、rは右詰め
+        表本体・・・
+      \end{tabular}
+    }
+    \caption{  }
+  \end{table}
+
+  数式　表
+  \begin{array}{列指定}
+
+  \end{array}
+
+  \scalebox{0.6}[0.8]{  % 0.6はヨコ幅の倍率、0.8はタテ幅の倍率
+
+  }
+
+  箇条書き
+  itemize　点々, enumerate　数字, description　指定
+
+\end{verbatim}
+
+
+\end{document}
